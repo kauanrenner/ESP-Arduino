@@ -43,7 +43,7 @@ void loop(){
     if (comando == "LIGAR" && !acionado_ligar)
     {
       digitalWrite(led, HIGH);
-      myservo.write(0);
+      myservo.write(90);
       Serial.println("LED Ligado");
       acionado_ligar = true;
       acionado_desligar = false;
@@ -89,7 +89,7 @@ void loop(){
   if (millis() >= proximo && d_real != 0 && !intervalo && agendado)
   {
     digitalWrite(led, HIGH);
-    myservo.write(0);
+    myservo.write(90);
     executando = true;
     agendado = false;
   }
